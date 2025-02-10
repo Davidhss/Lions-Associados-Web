@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root{
+    --vermelho-primario: #E51620;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(45deg, #181818, #121212);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 50px;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 115.089%;
+    text-transform: uppercase;
+    margin: 30px 0;
+    max-width: 430px;
+}
+
+.content h1 span {
+    color: var(--vermelho-primario);
+}
+
+.meio{
+    padding: 30px 30px;
+    background-image: linear-gradient(45deg, var(--vermelho-primario), #b40f17);
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.meio-ebook{
+    padding: 30px 30px;
+    background-image: linear-gradient(45deg, var(--vermelho-primario), #b40f17);
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: default;
+}
+.meio-ebook a{
+    padding: 10px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #161616;
+    transition: .3s ease;
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+    font-weight: bold;
+}
+.meio-ebook a:hover{
+    background-color: #212121;
+    letter-spacing: .5px;
+}
+.meio i, .meio-ebook i{
+    font-size: 3rem;
+}
+
+button {
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 30px 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--vermelho-primario);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--vermelho-primario);
+    background-color: transparent;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--vermelho-primario);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: var(--vermelho-primario);
+    transition: background 0s;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 50px;
+    margin: 0 0 30px 0;
+}
+.redes-sociais a{
+    color:white;
+    text-decoration: none;
+    font-size: 35px;
+}

@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --vermelho-primario: #E51620;
+    --neutrals-200: #A1A1A1;
+    --neutrals-300: #767676;
+    --neutrals-400: #5B5B5B;
+    --neutrals-500: #323232;
+    --neutrals-600: #2E2E2E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfdfd;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+.headLead {
+    width: 100%;
+}
+
+.headLead img.logoLions {
+    width: 127px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.info_principais_fase{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b38403;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: #ffe8aa;
+}
+
+span.agendado {
+    padding: 10px 20px;
+    background-color: var(--neutrals-500);
+    box-shadow: 0 4px 10px 0 #cacaca;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+span.agendado:hover{
+    transform: scale(1.1);
+}
+
+.content-quadro-proposta{
+    display: grid;
+    gap: 20px;
+}
+.quadro.proposta{
+    position: relative;
+}
+.edit-proposta{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.3rem;
+    color: var(--neutrals-400);
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: .3s;
+}
+.edit-proposta:hover{
+    background-color: #e2e2e2;
+}
+.info_lead div{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--neutrals-500);
+    padding-bottom: 7px;
+}
+.info_lead a{
+    color: var(--neutrals-500);
+}
+
+#retornoForm, #vendaForm, #formPonto, #formKeyWord{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 9999;
+}
+#txtValorVenda{
+    border-radius: 0px 5px 5px 0px !important;
+}
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.parteCima i{
+    position: absolute;
+    left: -90px;
+    color: rgb(87, 85, 85);
+    transition: .3s;
+    cursor: default;
+}
+
+.parteCima i:hover{
+    color: rgb(209, 209, 209);
+}
+#formulario-retorno p, #formulario-venda p, #formulario-ponto p, #formulario-keyword p{
+    color: #474747;
+    font-size: 90%;
+    text-align: center;
+}
+
+#formulario-retorno, #formulario-venda, #formulario-ponto, #formulario-keyword{
+    display: flex;
+    gap: 20px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #D1D1D1;    
+    box-shadow: 0 0 30px 0 #00000033;
+    border-radius: 10px;
+    padding: 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    max-width: 600px;
+}
+#formulario-venda{
+    background: linear-gradient(white, white) padding-box, linear-gradient(120deg, #e80e0e, #e3e3e300, #db0d0d) border-box;
+    border: 3px solid transparent ;
+}
+#formulario-retorno .btnRetorno, .btnVenda, .btnPonto.presente{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--vermelho-primario);
+    cursor: pointer;
+    color: white;
+    width: 300px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#formulario-venda i{
+    font-size: .9rem;
+    color: var(--neutrals-300);
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    transition: .3s;
+    border-radius: 20px;
+}
+#formulario-nota i:hover{
+    background-color: #eeeeee;
+}
+.cadastrar-agendamento {
+    position: fixed;
+    height: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    right: -600px;
+    top: 0;
+    display: flex;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+    box-shadow: 0 0 30px 0 #2b292961;
+    border-radius: 5px 0 0 5px;
+    transition: .3s ease-in-out;
+    border-left: 15px solid #E51620;
+}
+.cadastrar-agendamento.aberto{
+    right: 0 !important;
+}
+.cadastrar-agendamento img{
+    height: 130px;
+}
+.titulo-modal{
+    width: 100%;
+    padding: 0 50px;
+}
+.dados-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 500px;
+    padding: 0 50px;
+}
+.dados-modal h3{
+    color: #E51620;
+}
+.dados-modal .info{
+    display: flex;
+    flex-direction: column;
+}
+.campo-valor{
+    display: flex;
+}
+
+.cancel-button{
+    background-color: transparent !important;
+    color: #2474fd !important;
+    transition: .3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px 35px;
+}
+.cancel-button:hover{
+    transform: scale(1.1);
+}
+.cifrao{
+    max-width: 40px;
+    background-color: #d2d2d2 !important;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px !important;
+}
+#txtValorOportunidade{
+    border-radius: 0px 5px 5px 0px !important;
+}
+textarea{
+    min-height: 100px;
+    outline: none;
+}
+textarea, .info input, select, .cifrao{
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #D1D1D1;    
+    transition: .3s ease-in-out;
+    background-color: #fbfbfb;
+    padding: 10px;
+    width: 100%;
+    color: #2b2929;
+    font-size: .8rem;
+    resize: none;
+}
+.info input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--vermelho-primario);
+}
+.grupo-info{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+form .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.infoGeral {
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+}
+
+.infoGeral a {
+    padding-right: 42px;
+}
+
+.infoGeral .info_principais {
+    display: flex;
+    height: 29px;
+    gap: 12px;
+    align-items: center;
+}
+
+.infoGeral .info_principais h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--neutrals-600);
+}
+
+.infoGeral .info_principais span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--neutrals-500);
+}
+
+.headLead .info_controle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 10px 0 35px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headLead .info_controle .acoes {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.headLead .info_controle .acoes a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals-500);
+}
+
+.headLead .info_controle .acoes a .icone_cabecalho i {
+    font-size: 1.3rem;
+    transition: .3s ease;
+}
+.headLead .info_controle .acoes a .icone_cabecalho{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: .3s ease;
+}
+.headLead .info_controle .acoes a .icone_cabecalho:hover{
+    background-color: #eeeeee;
+}
+
+.headLead hr {
+    color: var(--neutrals-200);
+    margin-bottom: 39px;
+}
+
+
+.contentLead {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 400px;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas: "inf sit obs"
+    "ori con obs";
+    gap: 60px 20px;
+    padding-bottom: 50px;
+}
+.info{
+    grid-area: inf;
+}
+.origem{
+    grid-area: ori;
+}
+.situacao{
+    grid-area: sit;
+}
+.observacao{
+    grid-area: obs;
+    padding-top: 38px;
+}
+.val .info_valor{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color:#4a4a4a;
+}
+.consultor{
+    grid-area: con;
+}
+
+.contentLead h3 {
+    font-size: 20px;
+    color: var(--neutrals-600);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contentLead .titulo_info {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--neutrals-500);
+}
+
+.contentLead p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--neutrals-500);
+}
+
+.contentLead .quadro {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: 0.5px solid var(--neutrals-200);
+}
+.contentLead .quadro .lista_obs{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: var(--neutrals-500);
+    cursor: default;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.10);
+}
+.contentLead .quadro .lista_obs .linha_obs{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.contentLead .info_origem{
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+.contentLead .info_origem i{
+    color: var(--neutrals-500);
+    font-size: 1.4rem;
+}
+input.info_valor{
+    border: none;
+    border-bottom: 1px solid var(--neutrals-400);
+    padding: 5px;
+    display: none;
+    outline: none;
+}
+button#btnAtualizar{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--vermelho-primario);
+    cursor: pointer;
+    color: white;
+    display: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px 0 #2b292953;
+    
+}
+.Lead {
+    max-width: 100vw;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 48px;
+}
+
+.botoes {
+    padding: 30px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.botoes button {
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px 35px;
+    border-radius: 3px;
+    border: none;
+    color: rgb(250, 247, 247);
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+
+.botoes .retornoBtn {
+    background-color: var(--vermelho-primario);
+}
+@media (max-width: 1200px) {
+    .content-lead{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 100px 1fr;
+        grid-template-areas: "inf sit"
+        "ori con"
+        "obs obs";
+        gap: 60px 20px;
+    }
+}
+@media (max-width: 770px) {
+    main {
+        margin-left: 0 !important;
+    }
+
+    .headLead {
+        justify-content: center;
+    }
+}

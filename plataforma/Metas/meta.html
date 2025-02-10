@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas</title>
+    <script src="https://kit.fontawesome.com/d568686e85.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/metas-style.css">
+
+</head>
+<body>
+    <div class="venda-screen">
+        <div class="content-venda">
+            <img src="./img/Logo-Branco.png" alt="Logo Lions" height="50px">
+            <div class="mensagem">
+                <div class="parabens">
+                    PARABÉNS <span id="consultor-venda"></span>
+                </div>
+                <div class="frase">
+                    Mais uma vida transformada
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="card card-semanal div1">
+            <h3>SEMANAL</h3>
+            <hr>
+            <h1></h1>
+
+            <div class="icons-head">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+    
+                <i class="fa-regular fa-trash-can"></i>
+            </div>
+        </div>
+
+        <div class="card div4 com1">
+            <div class="titulo-card-equipe">COM 1</div>
+            <hr>
+
+            <div class="vendas">
+                
+            </div>
+        </div>
+        <div class="card div5 com2">
+            <div class="titulo-card-equipe">COM 2</div>
+            <hr>
+            
+            <div class="vendas">
+                
+            </div>
+        </div>
+
+        
+
+        <div class="card div2 equipe-ganhando">
+        </div>
+
+        <div class="card div3 outras-metas">
+            <div class="meta">
+                <span id="consultor-do-dia">
+                    
+                </span>
+                <span id="valor-vendedor-top">
+                    
+                </span>
+            </div>
+            <div class="meta">
+                Mensal
+                <span id="valor-meta-mensal">
+                    
+                </span>
+            </div>
+        </div>
+
+        <div class="card div6 meta-departamento" id="meta-comercial1">
+            
+        </div>
+        <div class="card div7 meta-departamento" id="meta-comercial2">
+            
+        </div>
+
+
+        <div class="card div8">
+            <form id="form-venda" class="controller">
+                <div class="textInputWrapper">
+                    <input id="valor" placeholder="0000,00" type="text" class="textInput" required autocomplete="off">
+                </div>
+    
+                <div class="textInputWrapper">
+                    <select class="textInput" name="vendedor" id="vendedor" required>
+                        <option value=""></option>
+                        <option value="Joyce">Joyce</option>
+                        <option value="Humberto">Humberto</option>
+                        <option value="Manoel">Manoel</option>
+                        <option value="Nathaly">Nathaly</option>
+                        <option value="Joyce">Joyce</option>
+                        <option value="Maisa">Maisa</option>
+                        <option value="Fabi">Fabi</option>
+                        <option value="Dani">Dani</option>
+                        <option value="Diego">Diego</option>
+                        <option value="Aline">Aline</option>
+                        <option value="Hilton">Hilton</option>
+                    </select>
+                </div>
+    
+                <div class="textInputWrapper">
+                    <select class="textInput" name="pagamento" id="pagamento" required>
+                        <option value=""></option>
+                        <option value="Pix">Pix</option>
+                        <option value="BK - Link">BK - Link</option>
+                        <option value="BK - Maq">BK - Maq</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Boleto">Boleto</option>
+                        <option value="Rede - Link">Rede - Link</option>
+                        <option value="Rede - Maq">Rede - Maq</option>
+                    </select>
+                </div>
+    
+                <button class="button" type="submit" onclick="">Lançar</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="./js/metas.js"></script>
+</body>
+</html>

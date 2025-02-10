@@ -1,0 +1,208 @@
+/* Importação de fonte externa */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root {
+    --vermelho-primario: #E51620;
+}
+
+/* Reset CSS */
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilo do container principal */
+.container {
+    overflow: hidden;
+    position: relative;
+    font-weight: 700;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.082);
+}
+
+/* Estilo da barra lateral */
+.navbar {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.notification {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--vermelho-primario);
+    text-decoration: none;
+}
+
+.notification #bell-icon {
+    color: #a8a8a8;
+}
+
+.notification span {
+    font-weight: bold;
+}
+
+.notification i {
+    font-size: 25px;
+}
+
+/* Estilo do cabeçalho da barra lateral */
+.navbar .user {
+    display: flex;
+    gap: 20px;
+}
+
+.head {
+    display: flex;
+    gap: 50px;
+}
+
+.nav {
+    display: flex;
+}
+
+/* Estilo da imagem do usuário */
+
+.navbar p {
+    color: #757575;
+}
+
+.user-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #d6d6d6;
+    overflow: hidden;
+}
+.user-img.presente{
+    border: 2px solid #22cc00 !important;
+}
+
+.user-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilo dos detalhes do usuário e título do menu */
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.user-details .title {
+    font-size: 11px;
+    color: var(--vermelho-primario);
+    text-transform: uppercase;
+}
+
+.user-details .name {
+    font-size: 16px;
+}
+
+/* Estilo dos itens do menu */
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #757575;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+.menu ul li#logout a {
+    margin-top: 15px;
+    color: white;
+    background-color: var(--vermelho-primario);
+    padding: 12px 12px;
+}
+
+.menu ul li#logout a:hover {
+    filter: brightness(1.1);
+}
+
+/* Efeito de hover nos itens do menu */
+.menu ul li>a:hover,
+.menu ul li.active>a:hover {
+    color: #000;
+    background-color: #e7e7e7;
+}
+
+/* Estilo dos ícones, texto e seta de dropdown no menu */
+.menu ul li .icon {
+    font-size: 20px;
+}
+
+.menu ul li .text {
+    flex: 1;
+}
+
+.menu ul li .arrow {
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+/* Rotação da seta de dropdown quando o submenu está ativo */
+.menu ul li.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Estilo dos itens do submenu */
+.menu .sub-menu li a {
+    padding: 10px 8px;
+    font-size: 12px;
+}
+
+/* Estilo adicional para o menu */
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        display: flex;
+    }
+    .menu .active{
+        display: none;
+    }
+
+    .navbar .logo{
+        height: 40px;
+    }
+    .user-details{
+        display: none;
+    }
+}

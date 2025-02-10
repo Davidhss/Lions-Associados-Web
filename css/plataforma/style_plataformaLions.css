@@ -1,0 +1,652 @@
+.apresentacao .bem-vindo span,
+.apresentacao a {
+    color: var(--vermelho-primario)
+}
+
+table,
+table tbody tr td {
+    font-weight: 400;
+    text-align: left
+}
+
+body,
+table,
+table tbody tr {
+    background-color: #fff
+}
+
+.apresentacao a,
+.paginacao a,
+.resumo {
+    text-decoration: none
+}
+
+:root {
+    --vermelho-primario: #E51620
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    color: #222;
+    font-family: Roboto, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden
+}
+
+.partecima {
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    flex-direction: column;
+    gap: 20px
+}
+
+.btn,
+.fase-lead {
+    align-items: center
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: center
+}
+
+.campo-nome,
+span.status {
+    display: block
+}
+
+.apresentacao {
+    align-self: flex-start;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center
+}
+
+.apresentacao .bem-vindo {
+    font-size: 1rem
+}
+
+.apresentacao a {
+    font-size: .85rem
+}
+
+.comandos_consultor,
+.dados_head,
+.fase-lead,
+.modal,
+.pesquisa,
+.resumo,
+.resumos_head,
+.status-card,
+.titulo {
+    display: flex
+}
+
+span.status {
+    height: 10px;
+    width: 10px;
+    border-radius: 20px
+}
+
+.meio,
+.modal,
+.resumos_head,
+.titulo,
+hr.separacao,
+table {
+    width: 100%
+}
+
+.comandos_consultor {
+    flex-direction: column;
+    gap: 20px
+}
+
+.status.semcontato {
+    background: var(--vermelho-primario) !important
+}
+
+.status.emaberto {
+    background: #ff54a7 !important
+}
+
+.status.semajuda {
+    background: #5a189a !important
+}
+
+.status.querianada {
+    background: #777 !important
+}
+
+.status.regularizado {
+    background: #023ea4 !important
+}
+
+.status.negociacao {
+    background: #d69e04 !important
+}
+
+.status.venda {
+    background: #fff !important
+}
+
+.status.cliente {
+    background: #dfdfdf !important
+}
+
+.status.semretorno {
+    background-color: #10c010 !important
+}
+
+.fase-lead {
+    border-radius: 10px;
+    padding: 2px 10px;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700
+}
+
+#qtde_leads,
+.resumos_head {
+    font-size: 13px
+}
+
+.fase-lead.nova-lead {
+    background: rgba(95, 255, 111, .46);
+    color: #406405
+}
+
+.fase-lead.achou-caro {
+    background: #ffcaca;
+    color: #ff3e4e
+}
+
+.fase-lead.negociacao {
+    background: #fffaae;
+    color: #5f5109
+}
+
+.fase-lead.sem-contato {
+    background: #ffe1e3;
+    color: var(--vermelho-primario)
+}
+
+.fase-lead.queria-nada {
+    background: #eee;
+    color: #777
+}
+
+.fase-lead.sem-ajuda {
+    background: #e7cfff;
+    color: #5a189a
+}
+
+.fase-lead.ja-regularizou {
+    background: #c9ddff;
+    color: #023ea4
+}
+
+.fase-lead.nova-venda {
+    background: #000;
+    color: #fff
+}
+
+.fase-lead.em-aberto {
+    background: #ffdfee;
+    color: #ff54a7
+}
+
+.fase-lead.nosso-cliente {
+    background: #f8f8f8
+}
+
+.fase-lead.enviado-mensagem {
+    background: #d2fcea;
+    color: #08711d
+}
+
+.fase-lead.nao-responde {
+    background: #e2fdff;
+    color: #02c5d3
+}
+
+.status.mensagem {
+    background-color: #08711d !important
+}
+
+.status.naoresponde {
+    background-color: #02c5d3 !important
+}
+
+.status.achoucaro {
+    background-color: #ff3e4e !important
+}
+
+.resumos_head {
+    gap: 15px;
+    align-items: center
+}
+
+.resultado {
+    min-width: 100px;
+    text-align: center;
+    align-self: center
+}
+
+.num-resumo {
+    font-size: 19px
+}
+
+.resumo {
+    gap: 5px;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    flex-direction: column;
+    cursor: default;
+    min-width: 120px;
+    font-size: 12px;
+    font-weight: 600;
+    border: .5px solid #a7a7a7;
+    color: #505050
+}
+
+#selectPaginacao,
+.pesquisa input,
+.pesquisa select {
+    border: 1px solid #d1d1d1;
+    transition: .3s ease-in-out;
+    background-color: #fbfbfb;
+    padding: 0 15px;
+    color: #2b2929;
+    height: 35px
+}
+
+.meio {
+    margin: 0 20px
+}
+
+.titulo {
+    justify-content: space-between;
+    padding: 10px
+}
+
+table thead {
+    font-weight: 500;
+    display: table-header-group;
+    border-bottom: 1px solid #000
+}
+
+.dados_head {
+    gap: 20px;
+    align-items: center
+}
+
+.dados_head.consultor {
+    padding-left: 10px;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: start;
+    flex-direction: column;
+    min-width: 600px
+}
+
+#selectPaginacao {
+    border-radius: 10px;
+    font-weight: 700
+}
+
+.pesquisa select {
+    padding: 0 0 0 10px;
+    font-weight: 700;
+    max-width: 100px;
+    border-radius: 0 5px 5px 0 !important
+}
+
+.pesquisa input:focus,
+.pesquisa select:focus {
+    outline: 0;
+    border: 1px solid var(--vermelho-primario)
+}
+
+p.agendamento-hoje,
+p.hora_agendamento {
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700
+}
+
+.pesquisa #btnPesquisa {
+    border-radius: 5px 0 0 5px !important;
+    font-weight: 800;
+    height: 35px
+}
+
+table tbody tr {
+    border-radius: 5px;
+    padding: 10px 25px 25px;
+    margin-top: 30px;
+    margin-bottom: 50px
+}
+
+table tbody tr td {
+    border-top: 1px solid #e2e2e2;
+    position: relative;
+    line-height: 30px;
+    font-size: .85rem;
+    display: table-cell;
+    padding: 8px 15px;
+    cursor: default
+}
+
+table tbody tr td a {
+    color: #000
+}
+
+table tbody tr td button:focus,
+table tbody tr td button:hover {
+    background: #f21212;
+    cursor: pointer
+}
+
+table tbody tr td:before {
+    color: #5e5e5e;
+    content: attr(data-label);
+    font-weight: 700;
+    left: 5px;
+    position: absolute;
+    display: none
+}
+
+.apresentacao,
+.botoes_head {
+    display: none
+}
+
+a.naoAtribuido {
+    font-weight: 700;
+    color: var(--vermelho-primario)
+}
+
+p.hora_agendamento {
+    background-image: linear-gradient(45deg, #2e43ff, #00aeff);
+    color: #fff
+}
+
+p.agendamento-hoje {
+    background-image: linear-gradient(45deg, #bd041d, #ff0e42);
+    color: #fff
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    justify-content: center;
+    align-items: center
+}
+
+.campo-nome a,
+.modal-content {
+    flex-direction: column;
+    display: flex
+}
+
+.modal-content {
+    background-color: var(--vermelho-primario);
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: #0056b3
+}
+
+.botoes_head button,
+.paginacao a {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #212121;
+    font-size: 12px
+}
+
+.campo-nome {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.campo-nome a {
+    gap: 0
+}
+
+.nome-text {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: -8px
+}
+
+table {
+    min-width: 400px;
+    border-collapse: separate;
+    padding: 20px;
+    border-radius: 20px
+}
+
+table thead th {
+    padding: 10px;
+    border-radius: 5px
+}
+
+table tbody {
+    font-size: .875em
+}
+
+table tbody tr {
+    border: none;
+    display: table-row;
+    color: #4b4b4b;
+    transition: .3s
+}
+
+table tbody tr:hover {
+    transition: .3s;
+    background: #f1f1f1
+}
+
+img.logo {
+    height: 70px
+}
+
+main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px
+}
+
+hr.separacao {
+    display: block
+}
+
+.meio {
+    margin-bottom: 30px
+}
+
+.partecima {
+    align-items: flex-start;
+    width: 95%;
+    display: none
+}
+
+.botoes_head,
+.fases_leads,
+.paginacao {
+    display: flex;
+    width: 100%
+}
+
+.paginacao {
+    margin-bottom: 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: end
+}
+
+.paginacao a {
+    border-radius: 10px;
+    font-weight: 700
+}
+
+.meio .titulo.supervisor {
+    width: 100%;
+    justify-content: space-between !important;
+    gap: 10px;
+    flex-direction: column
+}
+
+.meio .titulo.supervisor h3 {
+    color: #313131;
+    font-weight: 500
+}
+
+.situacao-lead {
+    font-size: 11px;
+    font-weight: 600;
+    color: #616161
+}
+
+.fases_leads {
+    align-items: center;
+    justify-content: space-between
+}
+
+.botoes_head button {
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: .3s
+}
+
+.botoes_head button.add-new {
+    background-color: var(--vermelho-primario);
+    min-width: 30px
+}
+
+.botoes_head button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 3px 10px #b3b3b3
+}
+
+.botoes_head button.lead-concluido {
+    background-color: #585858
+}
+
+.botoes_head {
+    gap: 10px;
+    justify-content: space-between
+}
+
+.botoes_head.botoes_controle {
+    justify-content: start
+}
+
+.infos_head {
+    display: grid;
+    gap: 10px
+}
+
+.linha {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: end
+}
+
+.linha.consultor {
+    flex-direction: row;
+    align-items: center
+}
+
+.linha.controle {
+    width: 100%;
+    align-items: center
+}
+
+.line-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.filtrosFase {
+    display: grid
+}
+
+.filtros input[type=date],
+.filtros select {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid #777;
+    padding: 0 15px;
+    min-width: 170px;
+    font-weight: 700;
+    font-size: 11px;
+    color: #494949;
+    outline: 0
+}
+
+.filtros input[type=date]:focus,
+.filtros select:focus {
+    border-bottom: 3px solid var(--vermelho-primario)
+}
+
+.status-lead {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100%
+}
+
+@media (max-width:500px) {
+    .partecima {
+        flex-direction: column !important
+    }
+
+    .botoes_head {
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+    }
+}

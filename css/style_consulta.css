@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto-Sans', sans-serif;
+}
+
+:root{
+    --vermelho-primario: #FF272F;
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+nav img{
+    height: 50px;
+}
+nav .botao-nav{
+    border: 3px solid var(--vermelho-primario);
+    text-decoration: none;
+    color: var(--vermelho-primario);
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 12px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.079);
+    transition: .3s ease-in-out;
+    height: 45px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav .botao-nav:hover{
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05);
+}
+#consulta-content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    cursor: default;
+}
+
+#consulta-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#consulta-content form h1{
+    font-size: 2rem;
+    color: #181818;
+}
+#consulta-content form span{
+    color: #545454;
+    font-size: 20px;    
+}
+#consulta-content form .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#consulta-content form .info label{
+    font-size: 13px;
+    font-weight: 700;
+    color: #6a6a6a;
+}
+#consulta-content form #tbxCPF{
+    width: 422px;
+    height: 50px;
+    border: none;
+    background-color: #00000018;
+    border-radius: 5px;
+    border-bottom: 4px solid #545454;
+    padding: 20px 15px;
+    color: #545454;
+    font-weight: 600;
+    transition: .3s ease;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+#consulta-content form #tbxCPF:focus{
+    background-color: #0000001e;
+    outline: none;
+    border-bottom: 4px solid var(--vermelho-primario);
+}
+
+#consulta-content form .botao input{
+    height: 45px;
+    width: 130px;
+    background: #181818;
+    color: rgb(241, 241, 241);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.157);
+    font-weight: 600;
+    transition: .3s;
+}
+#consulta-content form .botao input:hover{
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.456);
+    filter: brightness(1.05);
+}
+
+@media all and (min-width: 1150px) {
+
+}

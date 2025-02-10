@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root{
+    --vermelho-primario: #E51620;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 0 !important;
+}
+.left-side{
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo e Seta */
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.parteCima i{
+    position: absolute;
+    left: -90px;
+    color: rgb(87, 85, 85);
+    transition: .3s;
+    cursor: default;
+}
+.parteCima i:hover{
+    color: rgb(209, 209, 209);
+}
+
+/* Formulário */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 21px 0;
+    align-items: center;
+    justify-content: center;
+}
+form h2{
+    color: #eeeeee;
+    width: 400px;
+    font-size: 150%;
+    text-align: center;
+}
+form p{
+    color: #919191;
+    font-size: 90%;
+    text-align: center;
+}
+form p span{
+    background-color: var(--vermelho-primario);
+    color: white;
+    padding: 2px 7px;
+    line-height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+form .info{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding: 0 30px;
+}
+form .info span{
+    color: #616161;
+    font-weight: bold;
+    font-size: .8rem;
+}
+form .info select{
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fcfcfc;
+    border-bottom: 3px solid var(--vermelho-primario);
+    transition: .3s ease-in-out;
+    padding: 10px;
+    color: #2b2929;
+    font-size: .8rem;
+}
+form .info select option{
+    background-color: #2b2929;
+    color: white;
+}
+
+form .info select{
+    padding: 0 10px;
+}
+.info input:focus, .info select:focus {
+    outline: none;
+    border-bottom: 3px solid var(--vermelho-primario);
+}
+.botao{
+    width: 100%;
+    padding: 0 30px;
+}
+.botao input {
+    height: 35px;
+    width: 100%;
+    background-color: var(--vermelho-primario);
+    color: #eeeeee;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.botao input:hover {
+    filter: brightness(1.1);
+}
+
+@media only screen and (min-width: 800px) {
+
+    main{
+        margin-left: 256px !important;
+    }
+    .left-side{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0 10px 30px 0;
+    }
+}

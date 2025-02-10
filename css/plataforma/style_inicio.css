@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --vermelho-primario: #E51620;
+    --neutrals-200: #A1A1A1;
+    --neutrals-300: #767676;
+    --neutrals-400: #5B5B5B;
+    --neutrals-500: #323232;
+    --neutrals-600: #2E2E2E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.botao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comandosPonto{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.btnPonto.comands{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #2E2E2E;
+    color: white;
+    font-weight: 6f00;
+    cursor: pointer;
+    border-radius: 5px;
+}
+body {
+    background-color: #fdfdfd;
+    overflow-x: hidden;
+}
+
+main {
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.content h2{
+    font-size: 30px;
+}
+.content h3{
+    font-size: 25px;
+}
+.content h4{
+    font-size: 16px;
+}
+
+img.logoLions{
+    height: 50px;
+}
+
+.headPage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.notification{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--vermelho-primario);
+    text-decoration: none;
+}
+.notification #bell-icon{
+    color: #2E2E2E;
+}
+.notification span{
+    font-weight: bold;
+}
+.notification i{
+    font-size: 35px;
+}
+
+.content{
+    display: flex;
+    gap: 26px;
+    flex-direction: column;
+    color: var(--neutrals-500);
+    padding: 50px;
+}
+
+.primeiras-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.primeiras-info .aviso_desenvolvimento{
+    border-radius: 16px;
+    background: var(--Foundation-Warning-warning-100, #F9F1B1);
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--Foundation-Warning-warning-900, #635901);
+}
+
+.primeiras-info .cards_relatorios{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+.primeiras-info .cards_relatorios .card{
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    flex: 1 0 0;
+    border: 0.5px solid var(--Foundation-Neutrals-neutrals-100, #BFBFBF);
+    border-radius: 10px;
+    cursor: default;
+    transition: .3s ease;
+}
+.primeiras-info .cards_relatorios .card:hover{
+    background-color: #f3f3f3;
+}
+.primeiras-info .cards_relatorios .card span{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.cards_options{
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-menu{
+    display: flex;
+    gap: 25px;
+    flex: 1 0 0;
+    padding: 15px;
+    border: 0.5px solid var(--Foundation-Neutrals-neutrals-100, #BFBFBF);
+    border-radius: 10px;
+}
+
+.icone-card img, .icone-card i{
+    padding: 10px;  
+    border-radius: 17px;
+}
+.card-menu.leads img{
+    background: #F9C0C2;
+}
+.card-menu.relatorios img{
+    background: #F9F1B1;
+}
+.card-menu.desativado img{
+    background: #B7B7B7;
+}
+.card-menu.ponto i{
+    background: #acffc7;
+}
+.content-card{
+    display: grid;
+    cursor: default;
+    gap: 10px;
+}
+.content-card .texto-card{
+    display: grid;
+    gap: 5px;
+}
+.content-card .texto-card p{
+    color: var(--neutrals-400);
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+.card-menu a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: .3s ease-in-out;
+}
+.card-menu a:hover{
+    padding-left: 5px;
+}
+.card-menu.leads a{
+    color: var(--vermelho-primario);
+}
+.card-menu.relatorios a{
+    color: #D6C002;
+}
+.card-menu.ponto a, .card-menu.ponto i{
+    color: #04983a;
+}
+.card-menu.desativado a{
+    color: #464646;
+}
+
+@media all and (max-width: 800px) {
+    main{
+        margin: 0 !important;
+    }
+
+    .content h2{
+        font-size: 25px;
+    }
+    .content h3{
+        font-size: 20px;
+    }
+    .content h4{
+        font-size: 16px;
+    }
+
+    .cards_options{
+        display: flex;
+        flex-direction: column;
+    }
+    .cards_relatorios{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        align-items: stretch;
+        width: 100%;
+    }
+}
